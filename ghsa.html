@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(background.jpeg);
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .error-message {
+      color: red;
+      text-align: center;
+      margin-top: 0.5rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form onsubmit="return validateLogin()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+      </div>
+      <button type="submit">Login</button>
+      <div id="error" class="error-message">Login failed. Please try again.</div>
+    </form>
+  </div>
+  
+
+  <script>
+    function validateLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      if (username === "mugisha" && password === "123456") {
+        window.location.href = "family.html";
+        return false; // Prevent form from reloading the page
+      } else {
+        error.style.display = "block";
+        return false; // Prevent form submission
+      }
+    }
+    const users = {
+    mugisha: "123456",
+    hassan: "0788479005"
+  };
+
+  function validateLogin() {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if (users[username] === password) {
+      window.location.href = "family.html";
+    } else {
+      error.style.display = "block";
+    }
+    return false;
+  }
+  </script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAdUCoeJYXYHkdq5RzTPudcXnTRzxz0yVk",
+    authDomain: "mugisha-r-jordan.firebaseapp.com",
+    projectId: "mugisha-r-jordan",
+    storageBucket: "mugisha-r-jordan.firebasestorage.app",
+    messagingSenderId: "630087970853",
+    appId: "1:630087970853:web:86a08d397511a113ac4fcc",
+    measurementId: "G-YE0FZBT89V"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+  
+</body>
+</html>

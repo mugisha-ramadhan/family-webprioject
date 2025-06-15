@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Strong Home Replica</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for general text, Dancing Script for script-like text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: blue; /* A softer light grey for the outer background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+        }
+        .website-frame {
+            background-color: #e6e9ed; /* Slightly lighter grey for the frame */
+            border-radius: 40px; /* Consistent large border-radius */
+            padding: 25px; /* Generous padding inside the frame */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .website-content {
+            background-color:blue; /* Pure white background for content area */
+            border-radius: 30px; /* Slightly smaller border-radius than frame for inner content */
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Softer inner shadow */
+            width: 100%;
+        }
+        /* Custom font for the "Glad you're here!" text and bottom section titles */
+        .script-font {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 400; /* Regular weight for the script font */
+        }
+        /* Enhance hover effects for buttons/links */
+        .hover-effect {
+            transition: all 0.3s ease-in-out;
+        }
+        .hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="website-frame">
+        <div class="website-content relative">
+            <!-- Share buttons on the left -->
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 ml-6 hidden lg:block z-20">
+                <div class="bg-black rounded-full p-3 shadow-xl flex flex-col items-center space-y-3 border border-gray-100">
+                    <span class="text-sm font-semibold text-gray-700">194</span>
+                    <span class="text-xs text-gray-500">Shares</span>
+                    <hr class="w-full border-t border-gray-200 my-1">
+                    <button class="p-2 rounded-full hover:bg-blue-50 transition-colors duration-200 text-gray-600 hover:text-blue-600 hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-blue-50 transition-colors duration-200 text-gray-600 hover:text-blue-600 hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-blue-50 transition-colors duration-200 text-gray-600 hover:text-blue-600 hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pinterest"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-blue-50 transition-colors duration-200 text-gray-600 hover:text-blue-600 hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-blue-50 transition-colors duration-200 text-gray-600 hover:text-blue-600 hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-printer"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14H18V22H6z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Header/Navigation Bar -->
+            <header class="flex items-center justify-between px-8 py-5 shadow-sm bg-white border-b border-gray-100">
+                <div class="flex items-center space-x-3">
+                    <!-- Logo Section -->
+                    <img src="family.jpg" alt="Happy Strong Home Logo" class="w-19 h-20 rounded-full shadow-md">
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold text-gray-900">happy</span>
+                        <span class="text-2xl font-extrabold text-gray-900">strong</span>
+                        <span class="text-2xl font-extrabold text-gray-900">family</span>
+                    </div>
+                </div>
+
+                <!-- Primary Navigation -->
+                <nav class="hidden md:flex space-x-7 text-gray-700 font-medium text-base">
+                    <a href="#" class="hover:text-blue-600 px-4 py-2 rounded-md transition-all duration-200 hover-effect">HOME</a>
+                    <a href="#" class="hover:text-blue-600 px-4 py-2 rounded-md transition-all duration-200 hover-effect">ABOUT US</a>
+                    <div class="relative group">
+                        <button class="flex items-center hover:text-blue-600 px-4 py-2 rounded-md transition-all duration-200 hover-effect">
+                            LOGIN
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu (hidden by default) -->
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10 border border-gray-100">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">member</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">guest</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center hover:text-blue-600 px-4 py-2 rounded-md transition-all duration-200 hover-effect">
+                            PHOTOS
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu (hidden by default) -->
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10 border border-gray-100">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">OLD</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">NEW</a>
+                        </div>
+                    </div>
+                    <a href="#" class="hover:text-blue-600 px-4 py-2 rounded-md transition-all duration-200 hover-effect">HISTORY</a>
+                    <a href="#" class="hover:text-blue-600 px-4 py-2 rounded-md transition-all duration-200 hover-effect">JOIN</a>
+                </nav>
+
+                <!-- Search Icon and Mobile Menu Button -->
+                <div class="flex items-center space-x-5">
+                    <button class="text-gray-600 hover:text-blue-600 transition-colors duration-200 hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="relative w-full h-[550px] bg-cover bg-center" 
+         style="background-image: url('family.jpg');">
+    
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <div class="relative z-10 h-full flex flex-col justify-center items-start px-12 text-white">
+        
+        <h1 class="script-font text-7xl md:text-8xl font-bold" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6);">
+            Family Learning and Joy
+        </h1>
+        
+        <p class="mt-4 text-lg   font-bold" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">
+            My family truly holds my entire heart❤️ Every moment we share becomes a cherished memory, filled with love and warmth that brings so much joy to our lives. 😊 These precious times together are what I value most, building a bond that's irreplaceable..
+        </p>
+    </div>
+</section>
+
+            <!-- Secondary Navigation below hero -->
+            <nav class="flex justify-center py-5 bg-white border-b border-gray-100 shadow-sm">
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-10 text-gray-700 font-medium text-base">
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-200 px-3 py-2 rounded-md hover-effect">HOME</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-200 px-3 py-2 rounded-md hover-effect">ABOUT US</a></li>
+                    <li class="relative group">
+                        <button class="flex items-center hover:text-blue-600 px-3 py-2 rounded-md transition-colors duration-200 hover-effect">
+                            HISTORY
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10 border border-gray-100">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">guest</a>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <button class="flex items-center hover:text-blue-600 px-3 py-2 rounded-md transition-colors duration-200 hover-effect">
+                            LOGIN
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10 border border-gray-100">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">guest</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-200 px-3 py-2 rounded-md hover-effect">HISTORY</a></li>
+                </ul>
+            </nav>
+
+            <!-- Bottom Content Section -->
+            <section class="p-12 bg-white grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="flex flex-col items-center p-6 bg-blue-50 rounded-lg shadow-md hover-effect">
+                    <h2 class="text-5xl font-normal script-font mb-4 text-blue-800">hassan</h2>
+                    <img src="hassan.jpg" alt="Homeschool" class="rounded-lg shadow-lg mb-6 w-full max-w-[250px] h-auto object-cover">
+                    <p class="text-gray-700 leading-relaxed">my name is hassan og2tone iam 24 yearls old i work in a security agency and I am single. If you need more information about me, you can find it on my website or other public sites like Insragram and Facebook.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-green-50 rounded-lg shadow-md hover-effect">
+                    <h2 class="text-5xl font-normal script-font mb-4 text-green-800">neema</h2>
+                    <img src="neema.jpg" alt="Motherhood" class="rounded-lg shadow-lg mb-6 w-full max-w-[250px] h-auto object-cover">
+                    <p class="text-gray-700 leading-relaxed">My name is Mutesi nick neema Iam  business woman and I am twenty years old am single If you need more information about me, you can find it on my website or other public sites like Insragram and Facebook..</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-purple-50 rounded-lg shadow-md hover-effect">
+                    <h2 class="text-5xl font-normal script-font mb-4 text-purple-800">mugisha</h2>
+                    <img src="mugisha.jpg" alt="Best Loved" class="rounded-lg shadow-lg mb-6 w-full max-w-[250px] h-auto object-cover">
+                    <p class="text-gray-700 leading-relaxed">my name is mugisha r jordan iam 16 years old i am steal studying software development this is my project of my family if you need more information you can  see on my platform like instragram and facebook and audiomack.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-green-50 rounded-lg shadow-md hover-effect">
+                    <h2 class="text-5xl font-normal script-font mb-4 text-pink-800">christia</h2>
+                    <img src="kiristia1.jpg" alt="Motherhood" class="rounded-lg shadow-lg mb-6 w-full max-w-[250px] h-auto object-cover">
+                    <p class="text-gray-700 leading-relaxed"> my name is trip k  i am 12 yeals old I am an emerging artist and I am the last born in my family. i am steal studying.</p>
+                </div>
+            </section>
+
+            <!-- Simple Footer -->
+            <footer class="bg-gray-800 text-white text-center py-5 text-sm">
+                &copy; 2025 Happy Strong Home. All rights reserved.
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
